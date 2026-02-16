@@ -1,34 +1,26 @@
-# Atlassian Rovo: Strategic Incident Response & Knowledge Synthesis 🛠️🧠
+# Strategic Knowledge Bridge: Atlassian Rovo + NeMo RL 🛠️🧠🤖
 
-This project showcases a realistic enterprise scenario using **Atlassian Rovo**, focusing on how its AI-powered "Agents" and "Search" accelerate complex cross-team workflows.
+This project showcases a realistic enterprise scenario where **Atlassian Rovo**'s cross-team synthesis is powered and guarded by **NeMo RL** (Reinforcement Learning).
 
-## 🏢 Scenario: The "Code Red" Product Launch Incident
+## 🏦 Scenario: High-Stakes Compliance & Incident Response
+In regulated industries (FinTech, Healthcare), an AI agent cannot just be "helpful"—it must be **Safe** and **Compliant**. 
 
-### Context:
-A major financial services platform is launching a new mortgage application feature. Post-deployment, a critical edge-case bug appears that affects only specific regional users. The relevant information is scattered across Jira (tickets), Confluence (architecture docs), Slack (dev chatter), and Google Drive (compliance logs).
+We demonstrate a "Code Red" incident where Rovo identifies the technical debt, but a **NeMo RL-aligned policy** ensures the communication doesn't violate SEC/FINRA regulations or internal risk policies.
 
-### The Rovo Solution:
-Standard manual research would take hours. **Atlassian Rovo** automates this by acting as a cross-platform knowledge bridge.
+## 🌟 Integrated Features
 
-## 🌟 Realistic Use Cases Showcased
+### 1. Rovo Agent Orchestration
+Custom agents for Jira, Confluence, and Slack that bridge data silos instantly.
 
-### 1. The "On-Call Bridge" Agent
-- **Trigger:** A Jira P1 incident is created.
-- **Action:** Rovo automatically scans Confluence for the "Incident Response Playbook" and cross-references recent Jira Deployments.
-- **Output:** A concise Slack summary providing the likely root cause and identifying the exact SME (Subject Matter Expert) based on recent commit history.
+### 2. NeMo RL Guardrails
+Using the training pipelines defined in our [NeMo RL Enterprise](https://github.com/gokang/nemo-rl-enterprise) project:
+- **Reward Modeling:** Scoring agent responses for "Regulatory Safety."
+- **PPO Alignment:** Tuning the Rovo Agent's personality to avoid high-risk "guarantee" language.
 
-### 2. Strategic "Gap Analysis"
-- **Scenario:** The Product Manager needs to explain the failure to executive stakeholders.
-- **Rovo Task:** "Summarize the mortgage feature technical debt discussed in Confluence and compare it against the actual bug reports in Jira from the last 24 hours."
-- **Benefit:** Instant synthesis of *intent* (Confluence) vs. *reality* (Jira).
-
-### 3. Automated Release Readiness
-- **Rovo Agent:** A custom agent that checks if all Jira sub-tasks meet the "Regulatory Compliance" checklist defined in an external PDF stored in SharePoint.
-
-## 🛠️ Implementation Blueprint
-- `agents/`: Definition of custom Rovo Agents (YAML/JSON format).
-- `prompts/`: Structured prompt templates for specialized Rovo queries.
-- `connectors/`: Documentation on configuring Third-Party SaaS connectors (GitHub, Slack, Google Drive).
+## 🛠️ Components
+- `agents/`: Rovo agent definitions, including the **RL-Aligned Compliance Auditor**.
+- `prompts/`: Multi-hop prompts designed for RL-tuned models.
+- `knowledge_base/`: Connector strategies for enterprise data.
 
 ---
-*Developed to demonstrate the power of AI-native enterprise collaboration.*
+*Bridging Knowledge with Safety.*
