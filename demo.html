@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atlassian Rovo + NeMo RL: Smart Incident Dashboard</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f5f7; margin: 0; display: flex; height: 100vh; }
+        #sidebar { width: 300px; background: #0747A6; color: white; padding: 20px; box-sizing: border-box; }
+        #main { flex-grow: 1; padding: 40px; overflow-y: auto; }
+        .card { background: white; border-radius: 8px; padding: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .status-badge { display: inline-block; padding: 4px 12px; border-radius: 12px; font-weight: bold; font-size: 12px; text-transform: uppercase; }
+        .p1 { background: #FFEBE6; color: #BF2600; }
+        .tag { background: #EAE6FF; color: #403294; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-right: 5px; }
+        .rovo-ai { border-left: 4px solid #0052CC; background: #F4F5F7; padding: 15px; margin-top: 15px; }
+        .nemo-guard { border-left: 4px solid #36B37E; background: #E3FCEF; padding: 15px; margin-top: 10px; font-style: italic; font-size: 0.9em; }
+        .logo { font-weight: bold; font-size: 20px; margin-bottom: 30px; display: flex; align-items: center; }
+        .logo span { margin-left: 10px; background: #0052CC; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+        h2 { margin-top: 0; color: #172B4D; }
+        pre { background: #f4f5f7; padding: 10px; border-radius: 4px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="logo">Atlassian <span>ROVO</span></div>
+        <p style="opacity: 0.8; font-size: 14px;">Connected Sources:</p>
+        <ul style="list-style: none; padding: 0; font-size: 14px;">
+            <li>✅ Jira Service Management</li>
+            <li>✅ Confluence Cloud</li>
+            <li>✅ Slack (War Rooms)</li>
+            <li>✅ Bitbucket Deployments</li>
+            <li>✅ <strong>NeMo RL Aligner</strong></li>
+        </ul>
+    </div>
+    <div id="main">
+        <h2>Active Incident Response</h2>
+        
+        <div class="card">
+            <div style="display:flex; justify-content: space-between; align-items: center;">
+                <h3>MORT-402: Mortgage API Latency Spike</h3>
+                <span class="status-badge p1">P1 - Critical</span>
+            </div>
+            <p><strong>Reported:</strong> 4 mins ago by <em>System Watchdog</em></p>
+            <div><span class="tag">#fintech</span><span class="tag">#mortgage-launch</span></div>
+            
+            <div class="rovo-ai">
+                <strong>🤖 Atlassian Rovo Analysis:</strong>
+                <p>Synthesizing context from 3 sources...</p>
+                <ul>
+                    <li><strong>Confluence:</strong> Found "Mortgage API Recovery Playbook". Root cause likely DB connection pool.</li>
+                    <li><strong>Bitbucket:</strong> Deployment <code>v2.4.1</code> by <em>j-doe</em> detected 12 mins ago.</li>
+                    <li><strong>Slack:</strong> <em>@dev-lead</em> mentioned "seeing pool timeout errors in US-East".</li>
+                </ul>
+            </div>
+
+            <div class="nemo-guard">
+                <strong>⚖️ NeMo RL Compliance Layer (PPO Aligned):</strong>
+                <p>"Rovo's raw draft was intercepted. It initially stated 'Guaranteed fix in 5 mins'. NeMo RL has aligned the response to meet SEC-safe communication protocols."</p>
+            </div>
+
+            <div style="margin-top: 20px; padding: 15px; border: 1px solid #DFE1E6; border-radius: 4px; background: #fff;">
+                <strong>Draft for #incident-war-room:</strong>
+                <p>🚨 **Incident Alert**: Mortgage API experiencing high latency. Correlation found with deployment <code>v2.4.1</code>. Engineering is scaling DB connection pools per the recovery playbook. We are monitoring for stabilization. No customer data risk identified. <em>(Aligned Response)</em></p>
+                <button style="background: #0052CC; color: white; border: none; padding: 8px 16px; border-radius: 3px; cursor: pointer;">Approve & Post to Slack</button>
+            </div>
+        </div>
+
+        <div class="card" style="opacity: 0.6;">
+            <h3>Strategic Knowledge Synthesis</h3>
+            <p>Summarize technical debt in Confluence vs. Jira bugs for the mortgage project.</p>
+            <button style="border: 1px solid #42526E; background: transparent; padding: 5px 15px; border-radius: 3px;">Run Rovo Task</button>
+        </div>
+    </div>
+</body>
+</html>

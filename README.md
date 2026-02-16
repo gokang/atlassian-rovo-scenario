@@ -1,26 +1,31 @@
-# Strategic Knowledge Bridge: Atlassian Rovo + NeMo RL 🛠️🧠🤖
+# Atlassian Rovo + NeMo RL: The Intelligent Incident Bridge 🛠️🧠🤖
 
-This project showcases a realistic enterprise scenario where **Atlassian Rovo**'s cross-team synthesis is powered and guarded by **NeMo RL** (Reinforcement Learning).
+This project provides a **demo-ready showcase** of how Atlassian Rovo and NVIDIA NeMo RL work together to handle critical enterprise incidents.
 
-## 🏦 Scenario: High-Stakes Compliance & Incident Response
-In regulated industries (FinTech, Healthcare), an AI agent cannot just be "helpful"—it must be **Safe** and **Compliant**. 
+## 🚀 Live Demo Simulation
+I have created a user-facing dashboard to visualize this scenario:
+- **File:** `demo.html`
+- **How to view:** Open `demo.html` in any browser to see the Rovo + NeMo orchestration in action.
 
-We demonstrate a "Code Red" incident where Rovo identifies the technical debt, but a **NeMo RL-aligned policy** ensures the communication doesn't violate SEC/FINRA regulations or internal risk policies.
+## 🏦 Scenario: "Code Red" Mortgage API Failure
+When a P1 incident hits, speed is everything—but accuracy and compliance are mandatory.
 
-## 🌟 Integrated Features
+### 1. Knowledge Synthesis (Rovo)
+Rovo instantly bridges **Jira**, **Confluence**, and **Bitbucket** to identify the root cause:
+- Correlates a specific Bitbucket deployment with a Jira spike.
+- Pulls the exact recovery playbook from Confluence.
+- Summarizes the last 10 messages in the Slack war room.
 
-### 1. Rovo Agent Orchestration
-Custom agents for Jira, Confluence, and Slack that bridge data silos instantly.
-
-### 2. NeMo RL Guardrails
-Using the training pipelines defined in our [NeMo RL Enterprise](https://github.com/gokang/nemo-rl-enterprise) project:
-- **Reward Modeling:** Scoring agent responses for "Regulatory Safety."
-- **PPO Alignment:** Tuning the Rovo Agent's personality to avoid high-risk "guarantee" language.
+### 2. Regulatory Guardrails (NeMo RL)
+Before the update is sent to stakeholders, a **NeMo RL-aligned model** (PPO/RLHF) rewrites the summary:
+- **Filters Risk:** Removes unauthorized guarantees (e.g., "fixed in 5 mins").
+- **Ensures Tone:** Adjusts language to meet SEC/FINRA financial compliance standards.
+- **Safety Judge:** Uses a Reward Model to audit the final text for regulatory safety.
 
 ## 🛠️ Components
-- `agents/`: Rovo agent definitions, including the **RL-Aligned Compliance Auditor**.
-- `prompts/`: Multi-hop prompts designed for RL-tuned models.
-- `knowledge_base/`: Connector strategies for enterprise data.
+- `demo.html`: The user-facing dashboard showing the "proactive agent" in action.
+- `nemo_rl_integration/`: Python scripts for compliance auditing and aligned text generation.
+- `agents/`: Custom Rovo Agent definitions.
 
 ---
 *Bridging Knowledge with Safety.*
